@@ -7,11 +7,13 @@ namespace ApiExamen.StoreProcedures
 {
     public class StoreProcedure
     {
+        private readonly string _connectionString = "Data Source=MSANCHEZ\\SQLEXPRESS;User ID=sa;Password=Acirema$1;Initial Catalog=BdiExamen;Connect Timeout=30;Encrypt=false";
+
         public ExamenResponse AgregarExamen(ExamenDto examen)
         {
             ExamenResponse exaResponse = new ExamenResponse();
 
-            using (SqlConnection connection = new SqlConnection("Data Source=MSANCHEZ\\SQLEXPRESS;User ID=sa;Password=Acirema$1;Initial Catalog=BdiExamen;Connect Timeout=30;Encrypt=false"))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 using (SqlCommand command = new SqlCommand("dbo.spAgregar", connection))
                 {
@@ -95,7 +97,7 @@ namespace ApiExamen.StoreProcedures
         {
             ExamenResponse exaResponse = new ExamenResponse();
 
-            using (SqlConnection connection = new SqlConnection("Data Source=MSANCHEZ\\SQLEXPRESS;User ID=sa;Password=Acirema$1;Initial Catalog=BdiExamen;Connect Timeout=30;Encrypt=false"))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 using (SqlCommand command = new SqlCommand("dbo.spActualizar", connection))
                 {
@@ -179,7 +181,7 @@ namespace ApiExamen.StoreProcedures
         {
             ExamenResponse exaResponse = new ExamenResponse();
 
-            using (SqlConnection connection = new SqlConnection("Data Source=MSANCHEZ\\SQLEXPRESS;User ID=sa;Password=Acirema$1;Initial Catalog=BdiExamen;Connect Timeout=30;Encrypt=false"))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 using (SqlCommand command = new SqlCommand("dbo.spEliminar", connection))
                 {
@@ -255,7 +257,7 @@ namespace ApiExamen.StoreProcedures
         {
             ExamenResponse exaResponse = new ExamenResponse();
 
-            using (SqlConnection connection = new SqlConnection("Data Source=MSANCHEZ\\SQLEXPRESS;User ID=sa;Password=Acirema$1;Initial Catalog=BdiExamen;Connect Timeout=30;Encrypt=false"))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 using (SqlCommand command = new SqlCommand("dbo.spConsultarId", connection))
                 {
