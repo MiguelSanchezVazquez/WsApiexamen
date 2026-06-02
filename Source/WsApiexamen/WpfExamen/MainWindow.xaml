@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfExamen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExamen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <CheckBox x:Name="CheckBoxWS" Content="Llamar usando Web Service" HorizontalAlignment="Left" Margin="45,31,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,10,0,0" TextWrapping="Wrap" Text="API Examen" VerticalAlignment="Top" RenderTransformOrigin="0.414,-2.19"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,77,0,0" TextWrapping="Wrap" Text="Id:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,101,0,0" TextWrapping="Wrap" Text="Nombre:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,123,0,0" TextWrapping="Wrap" Text="Dirección:" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbIdExamen" HorizontalAlignment="Left" Margin="128,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Margin="128,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
+        <TextBox x:Name="tbDescripcion" HorizontalAlignment="Left" Margin="128,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
+        <Button Content="Agregar" HorizontalAlignment="Left" Margin="45,152,0,0" VerticalAlignment="Top" Width="62" Click="Button_Agregar_Click"/>
+        <Button Content="Actualizar" HorizontalAlignment="Left" Margin="128,152,0,0" VerticalAlignment="Top" Width="62" Click="Button_Actualizar_Click"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="209,152,0,0" VerticalAlignment="Top" Width="62" Click="Button_Eliminar_Click"/>
+        <Button Content="Consultar" HorizontalAlignment="Left" Margin="287,152,0,0" VerticalAlignment="Top" Width="62" Click="Button_Consultar_Click"/>
+        <TextBlock x:Name="tbResponse" HorizontalAlignment="Left" Margin="46,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303"/>
+
+    </Grid>
+</Window>
